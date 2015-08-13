@@ -46,6 +46,9 @@
     if ([self.biathleteArray count]){
         cell.bibNumLabel.text = [[[self.biathleteArray objectAtIndex:indexPath.row] bibNum] stringValue];
         cell.lapNumLabel.text = [[[self.biathleteArray objectAtIndex:indexPath.row] lapNum] stringValue];
+        
+        // Need to update stepper value if repeat bib number entered to adjust lap count
+        cell.lapStepper.value = [[[self.biathleteArray objectAtIndex:indexPath.row] lapNum] doubleValue];
         //NSLog(@"Bib: %@, Laps: %@", cell.bibNumLabel.text, cell.lapNumLabel.text);
         
     }
@@ -80,7 +83,8 @@
         for (Biathlete *biathlete in self.biathleteArray)
         {
             // Need to account for accidentally entering a repeat bib
-            if ([NSNumber numberWithInt:[self.bibNumToEnter.text intValue]] == biathlete.bibNum)
+            
+            if ([self.bibNumToEnter.text intValue] == [biathlete.bibNum intValue])
             {
                 NSNumber *newLapNum = [NSNumber numberWithInt:[biathlete.lapNum intValue] + 1];
                 biathlete.lapNum = newLapNum;
@@ -127,9 +131,12 @@
     NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:buttonPosition];
     
     // Then use that index to edit biathlete object
-    Biathlete *biathleteToEdit = [self.biathleteArray objectAtIndex:indexPath.row];
-    biathleteToEdit.lapNum = [NSNumber numberWithDouble:sender.value];
-    [self.biathleteArray replaceObjectAtIndex:indexPath.row withObject:biathleteToEdit];
+    
+    if ([self.biathleteArray count]){
+        Biathlete *biathleteToEdit = [self.biathleteArray objectAtIndex:indexPath.row];
+        biathleteToEdit.lapNum = [NSNumber numberWithDouble:sender.value];
+        [self.biathleteArray replaceObjectAtIndex:indexPath.row withObject:biathleteToEdit];
+    }
     
     [self.tableView reloadData];
     
@@ -145,7 +152,7 @@
     
     for (Biathlete *biathlete in self.biathleteArray)
     {
-        if (bibNumToSave == biathlete.bibNum)
+        if ([bibNumToSave intValue] == [biathlete.bibNum intValue])
         {
             // Add to completeLapData, first checking to see if athlete already exists
             if ([self.completeLapData objectForKey:bibNumKey]){
@@ -183,6 +190,9 @@
 }
 
 - (IBAction)endRace:(UIButton *)sender {
+    
+    //TODO: add code here to handle the saving of data
+    
     NSLog(@"%@", self.completeLapData);
 }
 
