@@ -56,68 +56,46 @@
                              
 }
 - (IBAction)numberButtonPressed:(UIButton *)sender {
+    self.bibNumToEnter.text = [NSString stringWithFormat:@"%@%d", self.bibNumToEnter.text, (int)[sender tag]];
     
-    if ([sender tag] == 11) // if Clear button pressed
-    {
-        self.bibNumToEnter.text = @"";
-    }
-    
-    else // append to current text field string, even if nothing is there
-    {
-        self.bibNumToEnter.text = [NSString stringWithFormat:@"%@%d", self.bibNumToEnter.text, (int)[sender tag]];
-    }
-    
+}
+- (IBAction)clearButtonPressed:(UIButton *)sender {
+    self.bibNumToEnter.text = @"";
+}
+
+-(void)startTimer:(NSNumber *) bibNumber{
+
+    // Call after 10 second delay
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self removeAndSave:bibNumber];
+    });
 }
 
 - (IBAction)enterBibNum:(UIButton *)sender {
-    
-    if([self.bibNumToEnter.text isEqualToString:@""])
-    {
-        //TODO: add UIAlert if user doesn't enter anything
-    }
-    
-    else
-    {
-        bool repeatBib = false;
-        
-        for (Biathlete *biathlete in self.biathleteArray)
-        {
-            // Need to account for accidentally entering a repeat bib
-            
-            if ([self.bibNumToEnter.text intValue] == [biathlete.bibNum intValue])
-            {
-                NSNumber *newLapNum = [NSNumber numberWithInt:[biathlete.lapNum intValue] + 1];
-                biathlete.lapNum = newLapNum;
-                repeatBib = true;
-            }
-            
-        }
-        
-        // Default behavior for entering a bib
-        if (!repeatBib){
-            Biathlete *biathlete = [Biathlete new];
-            biathlete.bibNum = [NSNumber numberWithInt:[self.bibNumToEnter.text intValue]];
-            biathlete.lapNum = [NSNumber numberWithInt:1];
-            biathlete.stageTimer = [NSTimer scheduledTimerWithTimeInterval:self.timeInterval
-                                                           target:self
-                                                         selector:@selector(removeAndSave:)
-                                                         userInfo:biathlete.bibNum
-                                                          repeats:NO];
-            
-            
+
+    Biathlete *biathlete = [[Biathlete alloc] initWithBibNumber:self.bibNumToEnter.text];
+    NSInteger repeatBibIndex =[biathlete isRepeatBib:self.bibNumToEnter.text inArray:self.biathleteArray];
+
+        if (repeatBibIndex>=0){
+            // Replace bib with correct value
+
+            Biathlete *biathleteRepeat = [self.biathleteArray objectAtIndex:repeatBibIndex];
+            NSLog(@"OLD: %@", biathleteRepeat.lapNum);
+            biathleteRepeat.lapNum = @([biathleteRepeat.lapNum intValue] + 1);
+            [self.biathleteArray replaceObjectAtIndex:repeatBibIndex withObject:biathleteRepeat];
+            NSLog(@"NEW: %@", biathleteRepeat.lapNum);
+
+        } else {
+            // Add and sort
             [self.biathleteArray addObject:biathlete];
+            [self sortBiathleteArray:self.biathleteArray];
         }
-        
-        
-    }
-    
-    // Need to clear text field
+
+    // Start cell timer
+    [self startTimer:@([self.bibNumToEnter.text integerValue])];
+
+    // Clear text field and update cells
     self.bibNumToEnter.text = @"";
-    
-    // Sort array by bibNum
-    [self sortBiathleteArray:self.biathleteArray];
-    
-    // And update cells with new data
     [self.tableView reloadData];
 
 }
@@ -142,17 +120,13 @@
     
 }
 
--(void)removeAndSave:(NSTimer *)timer
+-(void)removeAndSave:(NSNumber *)bibNumber
 {
-    // synching up uistepper laps with biathleteArray
-        [self.tableView reloadData];
-
-    NSNumber *bibNumToSave = timer.userInfo;
-    NSString *bibNumKey = [timer.userInfo stringValue];
+    NSString *bibNumKey = [bibNumber stringValue];
     
     for (Biathlete *biathlete in self.biathleteArray)
     {
-        if ([bibNumToSave intValue] == [biathlete.bibNum intValue])
+        if ([bibNumber intValue] == [biathlete.bibNum intValue])
         {
             // Add to completeLapData, first checking to see if athlete already exists
             if ([self.completeLapData objectForKey:bibNumKey]){

@@ -11,5 +11,8 @@
 @interface Biathlete : NSObject
 @property NSNumber *bibNum;
 @property NSNumber *lapNum;
-@property NSTimer *stageTimer;
+
+-(id)initWithBibNumber:(NSString *)bibEntered;
+-(NSInteger)isRepeatBib:(NSString *)bibEntered inArray:(NSArray *)biathleteArray;
+
 @end
