@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A72C8CC1BB4998600758D9C /* ResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A72C8CB1BB4998600758D9C /* ResultsTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		3AAD4B271B7A3C1E0042EEC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD4B261B7A3C1E0042EEC7 /* main.m */; };
 		3AAD4B2A1B7A3C1E0042EEC7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD4B291B7A3C1E0042EEC7 /* AppDelegate.m */; };
 		3AAD4B301B7A3C1E0042EEC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AAD4B2E1B7A3C1E0042EEC7 /* Main.storyboard */; };
@@ -17,6 +18,8 @@
 		3AAD4B4F1B7A401C0042EEC7 /* Biathlete.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD4B4E1B7A401C0042EEC7 /* Biathlete.m */; };
 		3ADFFEE81B7B9A7300E1BBA4 /* BiathleteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ADFFEE71B7B9A7300E1BBA4 /* BiathleteCell.m */; };
 		3ADFFEEA1B7BAB9200E1BBA4 /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ADFFEE91B7BAB9200E1BBA4 /* AppIcon.png */; };
+		A98E1B4577BBFE7B8E77D828 /* Pods_PenaltyLapCounter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA76B911CBDDF2CF33CA78B6 /* Pods_PenaltyLapCounter.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		BF4B97CF5199F2B3473F2E55 /* Pods_PenaltyLapCounterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC218B85FB31D79602BA3483 /* Pods_PenaltyLapCounterTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F9B7A80234C8EE047C8F610 /* Pods-PenaltyLapCounterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PenaltyLapCounterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PenaltyLapCounterTests/Pods-PenaltyLapCounterTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3A72C8CA1BB4998600758D9C /* ResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsTableViewController.h; sourceTree = "<group>"; };
+		3A72C8CB1BB4998600758D9C /* ResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsTableViewController.m; sourceTree = "<group>"; };
 		3AAD4B211B7A3C1E0042EEC7 /* PenaltyLapCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PenaltyLapCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AAD4B251B7A3C1E0042EEC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AAD4B261B7A3C1E0042EEC7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -48,6 +54,11 @@
 		3ADFFEE61B7B9A7300E1BBA4 /* BiathleteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BiathleteCell.h; sourceTree = "<group>"; };
 		3ADFFEE71B7B9A7300E1BBA4 /* BiathleteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BiathleteCell.m; sourceTree = "<group>"; };
 		3ADFFEE91B7BAB9200E1BBA4 /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
+		4EAF810B69E4F9335E696585 /* Pods-PenaltyLapCounter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PenaltyLapCounter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PenaltyLapCounter/Pods-PenaltyLapCounter.debug.xcconfig"; sourceTree = "<group>"; };
+		9079751E12D154996047DBDC /* Pods-PenaltyLapCounter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PenaltyLapCounter.release.xcconfig"; path = "Pods/Target Support Files/Pods-PenaltyLapCounter/Pods-PenaltyLapCounter.release.xcconfig"; sourceTree = "<group>"; };
+		BC218B85FB31D79602BA3483 /* Pods_PenaltyLapCounterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PenaltyLapCounterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEFE58D08A4736714E05B3F9 /* Pods-PenaltyLapCounterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PenaltyLapCounterTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PenaltyLapCounterTests/Pods-PenaltyLapCounterTests.release.xcconfig"; sourceTree = "<group>"; };
+		DA76B911CBDDF2CF33CA78B6 /* Pods_PenaltyLapCounter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PenaltyLapCounter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A98E1B4577BBFE7B8E77D828 /* Pods_PenaltyLapCounter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,18 +74,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF4B97CF5199F2B3473F2E55 /* Pods_PenaltyLapCounterTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2238C2254FEEB101FC5B92AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA76B911CBDDF2CF33CA78B6 /* Pods_PenaltyLapCounter.framework */,
+				BC218B85FB31D79602BA3483 /* Pods_PenaltyLapCounterTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		227BDBD33463E91136F68ABE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4EAF810B69E4F9335E696585 /* Pods-PenaltyLapCounter.debug.xcconfig */,
+				9079751E12D154996047DBDC /* Pods-PenaltyLapCounter.release.xcconfig */,
+				0F9B7A80234C8EE047C8F610 /* Pods-PenaltyLapCounterTests.debug.xcconfig */,
+				BEFE58D08A4736714E05B3F9 /* Pods-PenaltyLapCounterTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		3AAD4B181B7A3C1D0042EEC7 = {
 			isa = PBXGroup;
 			children = (
 				3AAD4B231B7A3C1E0042EEC7 /* PenaltyLapCounter */,
 				3AAD4B3D1B7A3C1E0042EEC7 /* PenaltyLapCounterTests */,
 				3AAD4B221B7A3C1E0042EEC7 /* Products */,
+				227BDBD33463E91136F68ABE /* Pods */,
+				2238C2254FEEB101FC5B92AD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,6 +128,8 @@
 				3AAD4B291B7A3C1E0042EEC7 /* AppDelegate.m */,
 				3AAD4B4A1B7A3D340042EEC7 /* LapCounterViewController.h */,
 				3AAD4B4B1B7A3D340042EEC7 /* LapCounterViewController.m */,
+				3A72C8CA1BB4998600758D9C /* ResultsTableViewController.h */,
+				3A72C8CB1BB4998600758D9C /* ResultsTableViewController.m */,
 				3AAD4B2E1B7A3C1E0042EEC7 /* Main.storyboard */,
 				3AAD4B4D1B7A401C0042EEC7 /* Biathlete.h */,
 				3AAD4B4E1B7A401C0042EEC7 /* Biathlete.m */,
@@ -139,9 +176,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3AAD4B441B7A3C1E0042EEC7 /* Build configuration list for PBXNativeTarget "PenaltyLapCounter" */;
 			buildPhases = (
+				56CDB7DB4152E92A1943C9EC /* Check Pods Manifest.lock */,
 				3AAD4B1D1B7A3C1E0042EEC7 /* Sources */,
 				3AAD4B1E1B7A3C1E0042EEC7 /* Frameworks */,
 				3AAD4B1F1B7A3C1E0042EEC7 /* Resources */,
+				C4DBD2FE70838DE311D5E440 /* Embed Pods Frameworks */,
+				B4F38E2597A166FED6776AF3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -156,9 +196,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3AAD4B471B7A3C1E0042EEC7 /* Build configuration list for PBXNativeTarget "PenaltyLapCounterTests" */;
 			buildPhases = (
+				4553D2A1BADA2D0EEE34BFD3 /* Check Pods Manifest.lock */,
 				3AAD4B361B7A3C1E0042EEC7 /* Sources */,
 				3AAD4B371B7A3C1E0042EEC7 /* Frameworks */,
 				3AAD4B381B7A3C1E0042EEC7 /* Resources */,
+				2A8D884233C67A067CC68BA3 /* Embed Pods Frameworks */,
+				804332FB0863DF4150FBECA6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,11 +219,12 @@
 		3AAD4B191B7A3C1D0042EEC7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Phil Henson";
 				TargetAttributes = {
 					3AAD4B201B7A3C1E0042EEC7 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = G8M9P5X24R;
 					};
 					3AAD4B391B7A3C1E0042EEC7 = {
 						CreatedOnToolsVersion = 6.4;
@@ -189,7 +233,7 @@
 				};
 			};
 			buildConfigurationList = 3AAD4B1C1B7A3C1D0042EEC7 /* Build configuration list for PBXProject "PenaltyLapCounter" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -228,6 +272,99 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2A8D884233C67A067CC68BA3 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PenaltyLapCounterTests/Pods-PenaltyLapCounterTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4553D2A1BADA2D0EEE34BFD3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		56CDB7DB4152E92A1943C9EC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		804332FB0863DF4150FBECA6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PenaltyLapCounterTests/Pods-PenaltyLapCounterTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4F38E2597A166FED6776AF3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PenaltyLapCounter/Pods-PenaltyLapCounter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4DBD2FE70838DE311D5E440 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PenaltyLapCounter/Pods-PenaltyLapCounter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3AAD4B1D1B7A3C1E0042EEC7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -235,6 +372,7 @@
 			files = (
 				3ADFFEE81B7B9A7300E1BBA4 /* BiathleteCell.m in Sources */,
 				3AAD4B4F1B7A401C0042EEC7 /* Biathlete.m in Sources */,
+				3A72C8CC1BB4998600758D9C /* ResultsTableViewController.m in Sources */,
 				3AAD4B2A1B7A3C1E0042EEC7 /* AppDelegate.m in Sources */,
 				3AAD4B4C1B7A3D340042EEC7 /* LapCounterViewController.m in Sources */,
 				3AAD4B271B7A3C1E0042EEC7 /* main.m in Sources */,
@@ -299,7 +437,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -343,6 +483,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -363,26 +504,37 @@
 		};
 		3AAD4B451B7A3C1E0042EEC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EAF810B69E4F9335E696585 /* Pods-PenaltyLapCounter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = PenaltyLapCounter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.henson.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		3AAD4B461B7A3C1E0042EEC7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9079751E12D154996047DBDC /* Pods-PenaltyLapCounter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = PenaltyLapCounter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.henson.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
 		3AAD4B481B7A3C1E0042EEC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F9B7A80234C8EE047C8F610 /* Pods-PenaltyLapCounterTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -395,6 +547,7 @@
 				);
 				INFOPLIST_FILE = PenaltyLapCounterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.henson.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PenaltyLapCounter.app/PenaltyLapCounter";
 			};
@@ -402,6 +555,7 @@
 		};
 		3AAD4B491B7A3C1E0042EEC7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEFE58D08A4736714E05B3F9 /* Pods-PenaltyLapCounterTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -410,6 +564,7 @@
 				);
 				INFOPLIST_FILE = PenaltyLapCounterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.henson.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PenaltyLapCounter.app/PenaltyLapCounter";
 			};

@@ -7,12 +7,25 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Realm/Realm.h>
+@import UIKit;
 
-@interface Biathlete : NSObject
-@property NSNumber *bibNum;
-@property NSNumber *lapNum;
+@class Biathlete;
+
+@interface Laps : RLMObject
+@property NSString *lapCount;
+@end
+RLM_ARRAY_TYPE(Laps)
+
+
+@interface Biathlete : RLMObject
+@property NSString *bibNum;
+@property RLMArray<Laps> *lapArray;
 
 -(id)initWithBibNumber:(NSString *)bibEntered;
 -(NSInteger)isRepeatBib:(NSString *)bibEntered inArray:(NSArray *)biathleteArray;
 
 @end
+RLM_ARRAY_TYPE(Biathlete)
+
+
