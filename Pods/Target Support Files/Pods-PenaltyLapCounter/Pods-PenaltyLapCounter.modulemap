@@ -1,0 +1,6 @@
+framework module Pods_PenaltyLapCounter {
+  umbrella header "Pods-PenaltyLapCounter-umbrella.h"
+
+  export *
+  module * { export * }
+}
